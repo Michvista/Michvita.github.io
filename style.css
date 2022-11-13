@@ -1,0 +1,210 @@
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family:'Poppins';
+}
+body{
+height: 100vh;
+background: rgb(4, 68, 62);
+/* overflow: hidden; */
+}
+ /* Hamburger menu */
+nav{
+    position: absolute;
+    bottom: -3rem;
+    right: 22rem;
+    width: 80px;
+    /* background: red; */
+    height: 300px;
+}
+nav .navcontent{
+    transform: rotate(45deg);
+}
+
+.navcontent .changingbtn,
+.navcontent span a,
+.one,
+.two
+{
+    height: 60px;
+    width: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+img{
+    max-width: 20px;
+    max-height: 20px;
+}
+.navcontent span a {
+    text-decoration: none;
+}
+.navcontent span{
+    position: absolute;
+    transition: all .6s ease;
+    opacity: 1;
+}
+nav.open .navcontent span{
+    position: absolute;
+    transform: rotate(0) translateY(-3.7em);  
+    opacity: 0;
+}
+.one img,
+.two img,
+.three img{
+    transition: all .6s ease;
+}
+nav.open .one img,
+nav.open .two img,
+nav.open .three img{
+    opacity: 0;
+}
+.one {
+    position: relative;
+    transform:translate(5em)rotate(90deg) ;
+    
+}
+.two {
+    position: relative;
+    transform:translate(-3em)rotate(45deg)translateY(-11em);
+}
+.three{
+    position: absolute;
+    transform:translate(5em)rotate(-45deg)translateY(-12em);
+}
+.navcontent .changingbtn img{
+    z-index: 100;
+    cursor: pointer;
+}
+.navcontent .one:hover,
+.navcontent .two:hover,
+.navcontent .three:hover{
+    opacity: .7;
+}
+
+
+/* todo app */
+
+.wrapper{
+    margin: 120px auto;
+    max-width: 400px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 25px;
+}
+.wrapper h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+.wrapper .inputfield{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+.inputfield input{
+    width: 85%;
+    height: 100%;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+    outline: none;
+}
+.inputfield button{
+    width: 60px;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: turquoise;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+    /* opacity: 0.6;
+    pointer-events: none; */
+}
+.wrapper .todo_list{
+        max-height: 250px;
+        overflow-y: auto;
+}
+li{
+    list-style: none;
+    height: 45px;
+    position: relative;
+    background: #ccc;
+    border-radius: 3px;
+    margin-bottom: 8px;
+    padding: 0 15px;
+    display:flex ;
+    align-items: center;
+    cursor: default;
+    overflow: hidden;
+}
+.todo_list li button{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: -45px;
+    background:rgb(49, 43, 43);
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+.fa-solid{
+    color:red;
+}
+.todo_list li:hover button{
+    right: 0px;
+}
+.wrapper .footer{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+.footer button{
+    border: none;
+    outline: none;
+    background-color: turquoise;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 17px;
+    padding: 6px 10px;
+
+}
+.checked{
+    text-decoration: line-through;
+}
+/* .inputfield button.active{
+    opacity: 1;
+    pointer-events: auto;
+} */
+.line-through{
+    text-decoration: line-through;
+}
+@media (max-width: 700px) {
+    .wrapper{
+        width: 80%;
+    }
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left:10rem;
+        bottom:-5rem;
+    }
+}
