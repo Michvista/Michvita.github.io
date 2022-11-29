@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins';
+   }
+   body{
+       padding-left: 20rem;
+       background: rgb(4, 68, 62);
+       /* overflow: hidden; */
+       /* align-items: center; */
+       /* justify-content: center; */
+       padding-top: 5rem;
+       display: flex;
+       flex-wrap: wrap;
+    }
+    nav{
+        position: absolute;
+        bottom: -3rem;
+        right: 22rem;
+        width: 80px;
+        /* background: red; */
+        height: 300px;
+    }
+    nav .navcontent{
+        transform: rotate(45deg);
+    }
+    
+    .navcontent .changingbtn,
+    .navcontent span a,
+    .one,
+    .two
+    {
+        height: 60px;
+        width: 60px;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    img{
+        max-width: 20px;
+        max-height: 20px;
+    }
+    .navcontent span a {
+        text-decoration: none;
+    }
+    .navcontent span{
+        position: absolute;
+        transition: all .6s ease;
+        opacity: 1;
+    }
+    nav.open .navcontent span{
+        position: absolute;
+        transform: rotate(0) translateY(-3.7em);  
+        opacity: 0;
+    }
+    .one img,
+    .two img,
+    .three img{
+        transition: all .6s ease;
+    }
+    nav.open .one img,
+    nav.open .two img,
+    nav.open .three img{
+        opacity: 0;
+    }
+    .one {
+        position: relative;
+        transform:translate(5em)rotate(90deg) ;
+        
+    }
+    .two {
+        position: relative;
+        transform:translate(-3em)rotate(45deg)translateY(-11em);
+    }
+    .three{
+        position: absolute;
+        transform:translate(5em)rotate(-45deg)translateY(-12em);
+    }
+    .navcontent .changingbtn img{
+        z-index: 100;
+        cursor: pointer;
+    }
+    .navcontent .one:hover,
+    .navcontent .two:hover,
+    .navcontent .three:hover{
+        opacity: .7;
+    }
+    .container{
+        /* min-height: 100vh; */
+        max-width: 1600px;
+        /* background-color: grey; */
+}
+button{
+    outline: none;
+}
+.addBtn{
+    margin-left: 13rem;
+    padding: 100px;
+    font-size: 5rem;
+    background: transparent;
+    border-color: white;
+    cursor: pointer;
+    color: white;
+}
+.notes{
+    padding-top: 5rem;
+    display: flex;
+}
+.note{
+    max-width: 200px;
+    height: 10rem;
+    /* border: 1px solid rgb(9, 108, 121); */
+    background: turquoise;
+    margin: 2rem;
+    /* padding-top: 1rem; */
+}
+input{
+    height: 2rem;
+    border: none;
+    width: 200px;
+}
+textarea{
+    outline: none;
+    height: 10rem;
+    width: 200px;
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.clearAll{
+    border: none;
+    outline: none;
+    background-color: turquoise;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5rem;
+    font-size: 17px;
+    padding: 6px 10px;
+    margin-top: 1rem;
+}
+.delete{
+    color:red;
+    background: transparent;
+    /* border: none; */
+    cursor: pointer;
+}
